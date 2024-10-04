@@ -1,8 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';  // Importar Router para navegação
-
+import { Router } from '@angular/router';  
 @Component({
   selector: 'app-pokemon-details',
   templateUrl: './pokemon-details.page.html',

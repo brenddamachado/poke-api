@@ -27,7 +27,7 @@ export class PokemonListPage implements OnInit {
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
   }
 
-  // Método para navegar para a página de detalhes
+
   viewDetails(pokemon: any) {
     const id = pokemon.url.split('/').filter(Boolean).pop();
     this.router.navigate(['/pokemon-details', id]);
