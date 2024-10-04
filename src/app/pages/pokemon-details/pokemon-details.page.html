@@ -1,21 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Pokémon Card
-    </ion-title>
+    <ion-title>Detalhes do Pokémon</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngIf="pokemon">
+<ion-content *ngIf="pokemon">
+  <ion-card>
     <img [src]="pokemon.sprites.front_default" />
     <ion-card-header>
       <ion-card-title>{{ pokemon.name | uppercase }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Peso: {{ pokemon.weight }} kg</p>
       <p>Altura: {{ pokemon.height }} cm</p>
+      <p>Peso: {{ pokemon.weight }} kg</p>
+      <p>Habilidades:</p>
+      <ul>
+        <li *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</li>
+      </ul>
     </ion-card-content>
-    <ion-button expand="full" (click)="nextPokemon()">Próximo Pokémon</ion-button>
   </ion-card>
 </ion-content>
