@@ -4,8 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="pokemon">
-  <ion-card>
+<ion-content>
+  <ion-card *ngIf="pokemon">
     <img [src]="pokemon.sprites.front_default" />
     <ion-card-header>
       <ion-card-title>{{ pokemon.name | uppercase }}</ion-card-title>
@@ -19,4 +19,9 @@
       </ul>
     </ion-card-content>
   </ion-card>
+
+
+  <ion-button expand="block" (click)="goToHome()">Home</ion-button>
+
+  <ion-button expand="block" (click)="goToAllPokemons()">Ver Todos os Pokémons</ion-button>
 </ion-content>
